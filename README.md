@@ -35,7 +35,7 @@ Smart Legal Aid DAO allows:
 
 | Layer | Tech |
 |-------|------|
-| Frontend | React, Tailwind CSS |
+| Frontend | Html, Tailwind CSS , Javascript |
 | Blockchain | Ethereum or Internet Computer (ICP) |
 | Wallet | MetaMask, Plug, Internet Identity |
 | Storage | IPFS or Canister Storage |
