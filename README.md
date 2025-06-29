@@ -3,7 +3,7 @@
 A decentralized platform to crowdfund and support underprivileged individuals seeking legal help. Built with Web3 for transparency, fairness, and global impact.
 
 ## 🔗 Live Demo
-Coming Soon or [Insert Link]
+Coming Soon 
 
 ## 🚀 Features
 - Submit & view legal aid requests
