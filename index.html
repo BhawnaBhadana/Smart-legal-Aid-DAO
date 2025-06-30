@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Legal Aid DAO</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <h1 class="site-title">Smart Legal Aid DAO</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#submit">Submit</a></li>
+        <li><a href="#explore">Explore</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#connect">Wallet</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero-text fade-in">
+      <label for="status" class="visually-hidden">Case Status</label>
+      <select id="status" required>
+        <option value="Pending">Pending</option>
+        <option value="Reviewed">Reviewed</option>
+        <option value="Funded">Funded</option>
+        <option value="Resolved">Resolved</option>
+      </select>
+
+  <section class="submit-form fade-in" id="submit">
+    <h2><img src="https://img.freepik.com/premium-photo/colorful-illustration-raised-fists-with-megaphone-symbolizing-activism_328146-8367.jpg?w=2000" class="icon" alt="Submit Icon"> Submit Legal Aid Request</h2>
+    <form id="caseForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <textarea id="details" placeholder="Describe your legal issue" required></textarea>
+      <select id="status" required>
+        <option value="Pending">Pending</option>
+        <option value="Reviewed">Reviewed</option>
+        <option value="Funded">Funded</option>
+        <option value="Resolved">Resolved</option>
+      </select>
+      <input type="number" id="goal" placeholder="Funding Goal in ETH" required>
+      <button type="submit" class="btn">Submit Case</button>
+    </form>
+    <p id="submit-msg"></p>
+  </section>
+
+  <section class="explore fade-in" id="explore">
+    <h2><img src="https://www.shutterstock.com/image-photo/park-people-volunteers-success-tablet-260nw-2469644041.jpg" class="icon" alt="Explore Icon"> Explore Legal Aid Requests</h2>
+    <input type="text" id="searchInput" placeholder="Search by name or keyword...">
+    <div id="loading">Loading cases...</div>
+    <div id="case-list"></div>
+  </section>
+
+  <section class="impact fade-in" id="impact">
+    <h2><img src="https://th.bing.com/th/id/OIP.MsthooL7A0ZSxg1fv8nglAHaHa" class="icon" alt="Impact Icon"> Community Impact</h2>
+    <div class="testimonial">
+      <img src="https://th.bing.com/th/id/OIP.MsthooL7A0ZSxg1fv8nglAHaHa" class="testimonial-img" alt="Testimonial Ravi">
+      <p>“Thanks to the DAO, I received help for my land dispute. Forever grateful!”</p>
+      <span>- Ravi Sharma, Haryana</span>
+    </div>
+    <div class="testimonial">
+      <img src="https://th.bing.com/th/id/OIP.MsthooL7A0ZSxg1fv8nglAHaHa" class="testimonial-img" alt="Testimonial Sita">
+      <p>“I never thought justice could be this accessible. This changed my life.”</p>
+      <span>- Sita Kumari, Bihar</span>
+    </div>
+  </section>
+
+  <section class="connect fade-in" id="connect">
+    <h2><img src="https://c8.alamy.com/comp/KPDH07/crypto-currency-ethereum-golden-symbol-KPDH07.jpg" class="icon" alt="Wallet Icon"> Connect Wallet</h2>
+    <p>Submit or fund cases using Web3 wallet.</p>
+    <button onclick="connectWallet()" class="btn">Connect MetaMask</button>
+    <p id="wallet-address"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Smart Legal Aid DAO. Built with ❤️ by Bhawna Bhadana.</p>
+  </footer>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
