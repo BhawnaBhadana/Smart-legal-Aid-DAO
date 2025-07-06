@@ -88,6 +88,39 @@
     <p id="wallet-address"></p>
   </section>
 
+  <!-- 🏆 Top Donors Leaderboard -->
+<section class="fade-in" id="leaderboard">
+  <h2 class="animated-header">🏆 Top Donors</h2>
+  <ul id="donor-list" class="leaderboard-list"></ul>
+</section>
+
+  <section class="fade-in" id="poll">
+  <h2 class="animated-header">🗳️ Governance Poll</h2>
+  <form id="pollForm">
+    <p>What area should we prioritize next?</p>
+
+    <div class="poll-group">
+      <label>
+        <input type="radio" name="vote" value="Women Rights" />
+        <span>Women Rights</span>
+      </label>
+      <label>
+        <input type="radio" name="vote" value="Land Disputes" />
+        <span>Land Disputes</span>
+      </label>
+      <label>
+        <input type="radio" name="vote" value="Cyber Harassment" />
+        <span>Cyber Harassment</span>
+      </label>
+    </div>
+
+    <button type="submit" class="btn">Submit Vote</button>
+    <p id="pollResult"></p>
+  </form>
+</section>
+
+
+
   <footer>
     <p>&copy; 2025 Smart Legal Aid DAO. Built with ❤️ by Bhawna Bhadana.</p>
   </footer>
