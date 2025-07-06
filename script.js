@@ -1,4 +1,6 @@
-onst fadeObserver = new IntersectionObserver((entries) => {
+
+// Scroll reveal
+const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
@@ -27,4 +29,35 @@ function connectWallet() {
   }
 }
 
+// Top Donors (Mock Data)
+const donors = {
+  "0xA1B2...E3": 750,
+  "0xC4D5...F6": 500,
+  "0x7890...12": 950,
+};
+
+const donorList = document.getElementById("donor-list");
+if (donorList) {
+  Object.entries(donors)
+    .sort((a, b) => b[1] - a[1])
+    .forEach(([wallet, amount], index) => {
+      const li = document.createElement("li");
+      li.textContent = `#${index + 1} - ${wallet} : ₹${amount}`;
+      donorList.appendChild(li);
+    });
+}
+
+document.getElementById("pollForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const vote = document.querySelector('input[name="vote"]:checked');
+  const result = document.getElementById("pollResult");
+
+  if (vote) {
+    result.textContent = `✅ Your vote for "${vote.value}" has been submitted!`;
+    result.style.color = "#0f0";
+  } else {
+    result.textContent = "⚠️ Please select an option before voting.";
+    result.style.color = "#f00";
+  }
+});
 
